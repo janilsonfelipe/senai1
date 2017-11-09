@@ -23,9 +23,10 @@ test:
 production: &default
   adapter: postgresql
   database: trello
-  encoding: unicode
+  encoding: utf8
   min_messages: warning
   pool: 5
   timeout: 5000
+
 
 
