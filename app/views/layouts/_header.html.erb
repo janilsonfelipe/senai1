@@ -21,19 +21,15 @@
       
       <ul class="nav navbar-nav navbar-right">
       
-      <% if current_user %>
       
-      <li><%= link_to 'Task', tasks_path %></li>
-      <li><%= link_to 'Editar Profile', edit_user_registration_path %></li>
-      <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
 
-      
-      <% else %>
-      
-        
-        <li><%= link_to 'Login', new_user_session_path %></li>
-        
-      <% end %>
+        <% if current_user %>
+            <li><%= link_to 'Task', tasks_path %></li>
+            <li><%= link_to 'Editar Profile', edit_user_registration_path %></li>
+            <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
+        <% else %>       
+            <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>
 
         
       </ul>
