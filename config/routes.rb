@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   devise_for :users
   get 'pages/home'
-  get 'sobre' => 'pages#about'
+
   get 'test' => 'pages#test'
 
   # The priority is based upon order of creation: first created -> highest priority.
