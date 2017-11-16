@@ -19,9 +19,9 @@
 </tr>
 -->
 
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <div class="panel panel-primary">	
-	<div class="panel-heading">Criado <%= time_ago_in_words( task.created_at ) %> </div>
+	<div class="panel-heading">Criado <%= time_ago_in_words( task.created_at ) %> <span class="glyphicon glyphicon-pencil" style="text-align:right" aria-hidden="true"></span></div>
 	
 	<div class="panel-body"><%= task.content %></div>
 	<div class="panel-footer text-center">
