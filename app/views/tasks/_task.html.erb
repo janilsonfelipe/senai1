@@ -21,11 +21,15 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <div class="panel panel-primary">	
-	<div class="panel-heading"> Criado <%= time_ago_in_words( task.created_at ) %></div>
+	<div class="panel-heading" style="color:white"> 
+	<%= link_to edit_task_path(task) do %>
+	Criado <%= time_ago_in_words( task.created_at ) %> ago
+	<% end %>
+	<%= link_to 'X', task_path(task), method: :delete, data: {confirm: "Are you sure?"}, class: 'pull-right' %>
+	</div>
 	
 	<div class="panel-body"><%= task.content %></div>
-	 <div style="text-align:center"><i class ='fa fa-pencil'> </i>
-	  <i class ='fa fa-trash'></i></div>
+	 
 	
 	<div class="panel-footer text-center">
 	<% if task.state == 'doing' %>
